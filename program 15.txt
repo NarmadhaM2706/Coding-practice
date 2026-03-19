@@ -1,0 +1,30 @@
+class Solution {
+    public String categorizeBox(int length, int width, int height, int mass) {    boolean op=false,op1=false;
+    long volume=(long)height*width*length;
+         if((length>= 10000 || width>=10000 || height >= 10000 || mass>=10000) 
+        || volume>=1000000000)
+         {
+            op=true;
+         }
+        
+       if(mass >=100) {
+        
+        op1=true;
+       }
+     if(op && op1)
+     {
+        return"Both";
+
+     }
+
+    if(op)
+     {
+        return "Bulky";
+     }
+if (op1)
+{
+    return "Heavy";
+}
+return "Neither";
+    }
+}
