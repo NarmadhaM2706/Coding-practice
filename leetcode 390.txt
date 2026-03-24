@@ -1,0 +1,19 @@
+class Solution {
+    public int lastRemaining(int n) {
+        int head=1;
+        int remaining=n;
+        int step=1;
+        boolean leftToright=true;
+        while(remaining>1)
+        {
+            if(leftToright || remaining%2==1)
+            {
+             head += step;
+            }
+            remaining/=2;
+            step*=2;
+            leftToright=!leftToright;
+        }
+        return head;
+    }
+}
